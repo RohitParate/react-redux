@@ -1,4 +1,4 @@
-import { ADD_USERS, REMOVE_USERS } from "./userTypes"
+import { ADD_USERS, ADD_USER, REMOVE_USERS, FETCHING_USERS, FETCHING_FAILED } from "./userTypes"
 
 export const addUsers = (users) => {
     return {
@@ -7,8 +7,28 @@ export const addUsers = (users) => {
     }
 }
 
+export const addUser = (user) => {
+    return {
+        type : ADD_USER,
+        payload : user
+    }
+}
+
 export const removeUsers = () => {
     return {
         type : REMOVE_USERS
+    }
+}
+
+export const fetchingUsers = () => {
+    return {
+        type : FETCHING_USERS
+    }
+}
+
+export const fetchingUsersFailed = (error) => {
+    return {
+        type : FETCHING_FAILED,
+        payload : error
     }
 }

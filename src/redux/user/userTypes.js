@@ -1,2 +1,5 @@
+export const ADD_USER = 'ADD_USER'
 export const ADD_USERS = 'ADD_USERS'
 export const REMOVE_USERS = 'REMOVE_USERS'
+export const FETCHING_USERS = 'FETCHING_USERS'
+export const FETCHING_FAILED = 'FETCHING_FAILED'
